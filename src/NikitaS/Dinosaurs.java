@@ -39,7 +39,7 @@ public class Dinosaurs extends Reptile {
             powerRanger= getName()+ " did not have the honor to be Power Ranger bot.";
         }
         if(mIMadeItUp){
-            imaginary= getName()+ " is a Dinosaur that I just made up.";
+            imaginary= getName()+ " is a dinosaur that I just made up.";
         }else{
             imaginary= getName()+ " is an actual dinosaur that I didn't make up.";
         }
