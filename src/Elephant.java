@@ -17,7 +17,7 @@ public class Elephant extends Mammal{
 
     @Override
     public void move() {
-        super.move();
+        System.out.println(getName()+"is moving at a top speed of "+getTopSpeed());
         System.out.println("Stomp Stomp Stomp Stomp");
     }
 

@@ -1,7 +1,7 @@
 /**
  * Created by Scott Lindley on 10/13/2016.
  */
-public class Reptile extends Animal{
+public abstract class Reptile extends Animal{
     private static final boolean IS_WARM_BLOODED = false;
     private boolean mHasForkedTongue;
     private boolean mIsVenomous;

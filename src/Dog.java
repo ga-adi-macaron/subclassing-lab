@@ -16,7 +16,7 @@ public class Dog extends Mammal{
 
     @Override
     public void move() {
-        super.move();
+        System.out.println(getName()+"is moving at a top speed of "+getTopSpeed());
         System.out.println("(Happy and excited running)");
     }
 

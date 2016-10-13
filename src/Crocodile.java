@@ -11,7 +11,7 @@ public class Crocodile extends Reptile{
 
     @Override
     public void move() {
-        super.move();
+        System.out.println(getName()+"is moving at a top speed of "+getTopSpeed());
         System.out.println("(belly dragging slide)");
     }
 

@@ -1,7 +1,7 @@
 /**
  * Created by Scott Lindley on 10/13/2016.
  */
-public class Animal {
+public abstract class Animal {
     private int mNumLegs;
     private double mTopSpeed;
     private boolean mIsEndangered;
@@ -14,13 +14,9 @@ public class Animal {
         mName = name;
     }
 
-    public void move(){
-        System.out.println(mName+" is moving at a top speed of "+mTopSpeed);
-    }
+    public abstract void move();
 
-    public void makeSound(){
-        System.out.println("ANIMAL SOUND");
-    }
+    public abstract void makeSound();
 
     public int getNumLegs() {
         return mNumLegs;
@@ -33,4 +29,6 @@ public class Animal {
     public String getName() {
         return mName;
     }
+
+    public double getTopSpeed(){return mTopSpeed;}
 }

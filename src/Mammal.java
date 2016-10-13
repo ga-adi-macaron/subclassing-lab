@@ -1,7 +1,7 @@
 /**
  * Created by Scott Lindley on 10/13/2016.
  */
-public class Mammal extends Animal{
+public abstract class Mammal extends Animal{
     private static final boolean IS_WARM_BLOODED = true;
     private boolean mHasHair;
 
