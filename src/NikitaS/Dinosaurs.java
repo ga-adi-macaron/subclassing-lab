@@ -4,28 +4,47 @@ package NikitaS;
  * Created by NikitaShuvalov on 10/13/16.
  */
 public class Dinosaurs extends Reptile {
-    private static boolean mIMadeItUp;
-    private static boolean mIsAPowerRangerBot;
+    private boolean mIMadeItUp;
+    private boolean mIsAPowerRangerBot;
 
-    public Dinosaurs(String name, int numLegs, float topSpeed, boolean isEndangered, boolean canRegenerate, boolean isPoisonous, boolean isAPowerRangerBot, boolean iMadeItUp) {
-        super(name, numLegs, topSpeed, isEndangered, canRegenerate, isPoisonous);
+    public Dinosaurs(String name, int numLegs, float topSpeed, boolean isPoisonous, boolean isAPowerRangerBot, boolean iMadeItUp) {
+        super(name, numLegs, topSpeed, true, true, isPoisonous);
         mIsAPowerRangerBot=isAPowerRangerBot;
         mIMadeItUp=iMadeItUp;
     }
 
-    public static boolean ismIMadeItUp() {
+    public boolean ismIMadeItUp() {
         return mIMadeItUp;
     }
 
-    public static void setmIMadeItUp(boolean mIMadeItUp) {
-        Dinosaurs.mIMadeItUp = mIMadeItUp;
+    public void setmIMadeItUp(boolean iMadeItUp) {
+        mIMadeItUp = iMadeItUp;
     }
 
-    public static boolean ismIsAPowerRangerBot() {
+    public boolean isAPowerRangerBot() {
         return mIsAPowerRangerBot;
     }
 
-    public static void setmIsAPowerRangerBot(boolean mIsAPowerRangerBot) {
-        Dinosaurs.mIsAPowerRangerBot = mIsAPowerRangerBot;
+    public void setmIsAPowerRangerBot(boolean isAPowerRangerBot) {
+        mIsAPowerRangerBot = isAPowerRangerBot;
     }
+    @Override
+    public void printAll(){
+        super.printAll();
+        String powerRanger;
+        String imaginary;
+        if(mIsAPowerRangerBot){
+            powerRanger = getName()+ " was a Power Ranger Bot.";
+        }else{
+            powerRanger= getName()+ " did not have the honor to be Power Ranger bot.";
+        }
+        if(mIMadeItUp){
+            imaginary= getName()+ " is a Dinosaur that I just made up.";
+        }else{
+            imaginary= getName()+ " is an actual dinosaur that I didn't make up.";
+        }
+        System.out.println(powerRanger);
+        System.out.println(imaginary);
+    }
+
 }

@@ -4,10 +4,10 @@ package NikitaS;
  * Created by NikitaShuvalov on 10/13/16.
  */
 public class Animal {
-    private static int mNumlegs;
-    private static float mTopSpeed;
-    private static boolean mIsEndangered;
-    private static String mName;
+    private int mNumlegs;
+    private float mTopSpeed;
+    private boolean mIsEndangered;
+    private String mName;
 
     public Animal(String name, int numLegs, float topSpeed, boolean isEndangered) {
         mName = name;
@@ -16,36 +16,42 @@ public class Animal {
         mIsEndangered = isEndangered;
     }
 
-    public static int getmNumlegs() {
+    public int getmNumlegs() {
         return mNumlegs;
     }
 
-    public static void setmNumlegs(int mNumlegs) {
-        Animal.mNumlegs = mNumlegs;
+    public void setmNumlegs(int numlegs) {
+        mNumlegs = numlegs;
     }
 
-    public static float getmTopSpeed() {
+    public float getmTopSpeed() {
         return mTopSpeed;
     }
 
-    public static void setmTopSpeed(float mTopSpeed) {
-        Animal.mTopSpeed = mTopSpeed;
+    public void setmTopSpeed(float topSpeed) {
+        mTopSpeed = topSpeed;
     }
 
-    public static boolean ismIsEndangered() {
+    public boolean ismIsEndangered() {
         return mIsEndangered;
     }
 
-    public static void setmIsEndangered(boolean mIsEndangered) {
-        Animal.mIsEndangered = mIsEndangered;
+    public void setisEndangered(boolean isEndangered) {
+        mIsEndangered = isEndangered;
     }
 
-    public static String getmName() {
+    public String getName() {
         return mName;
     }
 
-    public static void setmName(String mName) {
-        Animal.mName = mName;
+    public void setName(String name) {
+        mName = name;
+    }
+
+    public void printAll(){
+        System.out.println("\nAnimal name: "+mName+"\nNumber of legs: "+mNumlegs+
+        "\nTop Speed is: " +mTopSpeed+"kph"+
+        "\nIs "+mName+" endangered: "+mIsEndangered);
     }
 }
 

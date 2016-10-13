@@ -4,28 +4,42 @@ package NikitaS;
  * Created by NikitaShuvalov on 10/13/16.
  */
 public class Primate extends Mammal {
-    private static boolean mIsBipedal;
-    private static String mRelativeIntelligence;
+    private boolean mIsBipedal;
+    private String mRelativeIntelligence;
 
-    public Primate(String name, int numLegs, float topSpeed, boolean isEndangered, int daysOfGestation, boolean hasFur, boolean isBipedal, String relativeIntelligence) {
-        super(name, numLegs, topSpeed, isEndangered, daysOfGestation, hasFur);
+    public Primate(String name, float topSpeed, boolean isEndangered, int daysOfGestation,  boolean isBipedal, String relativeIntelligence) {
+        super(name, 2, topSpeed, isEndangered, daysOfGestation, false);
         mIsBipedal=isBipedal;
         mRelativeIntelligence=relativeIntelligence;
     }
 
-    public static boolean ismIsBipedal() {
+    public boolean isBipedal() {
         return mIsBipedal;
     }
 
-    public static void setmIsBipedal(boolean mIsBipedal) {
-        Primate.mIsBipedal = mIsBipedal;
+    public void setmIsBipedal(boolean isBipedal) {
+        mIsBipedal = isBipedal;
     }
 
-    public static String getmRelativeIntelligence() {
+    public String getRelativeIntelligence() {
         return mRelativeIntelligence;
     }
 
-    public static void setmRelativeIntelligence(String mRelativeIntelligence) {
-        Primate.mRelativeIntelligence = mRelativeIntelligence;
+    public void setmRelativeIntelligence(String relativeIntelligence) {
+        mRelativeIntelligence = relativeIntelligence;
     }
+    @Override
+    public void printAll(){
+        super.printAll();
+        String biPed;
+        if(mIsBipedal){
+            biPed=" is bipedal";
+        }else{
+            biPed=" not bipedal";
+        }
+        System.out.println(getName()+biPed+
+        "\n"+getName()+" is "+ mRelativeIntelligence);
+
+    }
+
 }

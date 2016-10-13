@@ -4,8 +4,8 @@ package NikitaS;
  * Created by NikitaShuvalov on 10/13/16.
  */
 public class Mammal extends Animal{
-    private static int mDaysOfGestation;
-    private static boolean mHasFur;//As opposed to hair.
+    private int mDaysOfGestation;
+    private boolean mHasFur;//As opposed to hair.
 
     public Mammal(String name, int numLegs, float topSpeed, boolean isEndangered, int daysOfGestation, boolean hasFur) {
         super(name, numLegs, topSpeed, isEndangered);
@@ -13,19 +13,32 @@ public class Mammal extends Animal{
         mHasFur=hasFur;
     }
 
-    public static int getmDaysOfGestation() {
+    public int getmDaysOfGestation() {
         return mDaysOfGestation;
     }
 
-    public static void setmDaysOfGestation(int mDaysOfGestation) {
-        Mammal.mDaysOfGestation = mDaysOfGestation;
+    public void setmDaysOfGestation(int daysOfGestation) {
+        mDaysOfGestation = daysOfGestation;
     }
 
-    public static boolean ismHasFur() {
+    public boolean ismHasFur() {
         return mHasFur;
     }
 
-    public static void setmHasFur(boolean mHasFur) {
-        Mammal.mHasFur = mHasFur;
+    public void setmHasFur(boolean hasFur) {
+        mHasFur = hasFur;
+    }
+
+    @Override
+    public void printAll(){
+        super.printAll();
+        String hairType;
+        if (mHasFur){
+            hairType="fur";
+        }else{
+            hairType="hair";
+        }
+        System.out.println("Gestation period is "+ mDaysOfGestation+" days\n"+
+        getName()+" has "+ hairType);
     }
 }
